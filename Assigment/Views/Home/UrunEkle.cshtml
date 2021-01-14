@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Ürün Ekle";
+}
+
+<h2>Ürün Ekleme Sayfası</h2>
+<br />
+<br />
+<form action="/Home/UrunEkle" method="post">
+    <label>Ürün Adı</label>
+    <br />
+    <input type="text" name="urunAdi" />
+    <br />
+    <br />
+    <label>Ürün Açıklaması</label>
+    <br />
+    <input type="text" name="urunAciklama" />
+    <br />
+    <br />
+    <label>Ürün Stoğu</label>
+    <br />
+    <input type="text" name="urunStok" />
+    <br />
+    <br />
+    <label>Ürün Fiyatı</label>
+    <br />
+    <input type="text" name="urunFiyat" />
+    <br />
+    <br />
+    @*<label>Ürün Resmi</label>
+    <br />
+    <input type="text" name="urunResmi" />
+
+    <br />
+    <br />*@
+    </form>
+    
+    <h2>Web Image  Örneği</h2>
+<form action="/Home/UrunEkle" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploadfile" id="uploadfile" />
+        <br />
+        @*<input type="submit" value="Kaydet" />*@
+        <input type="submit" value="Gönder" />
+
+   </form>
+   

@@ -1,0 +1,58 @@
+﻿@model AssigmentDeneme.Models.Urun
+
+@{
+    ViewBag.Title = "UrunGoster";
+}
+
+<h2>UrunGoster</h2>
+
+<div>
+    <h4>Urun</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunAciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunStok)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunStok)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunResim)
+        </dt>
+
+        <dd>
+           <img src="@Url.Content(Model.UrunResim)" width="250" height="250" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Güncelle", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Sil", "Index")
+</p>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<AssigmentDeneme.Models.Urun>
+<link href="~/Content/StyleSheet1.css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<table class="table table-bordered">
+        <tr>
+            <th>Ürün Id</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Açıklama</th>
+            <th>Ürün Fiyet</th>
+            <th>Ürün Stok</th>
+            <th>Ürün Foto</th>
+        </tr>
+        <tbody>
+            @foreach(var urn in Model)
+            {
+                <tr>
+                    <th>@urn.UrunID</th>
+                    <th>@urn.UrunAdi</th>
+                    <th>@urn.UrunAciklama</th>
+                    <th>@urn.UrunStok</th>
+                    <th>@urn.UrunFiyat</th>
+                    <th>@urn.UrunResim</th>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+<br />
+<div class="text-center" style="border">
+    @using (Html.BeginForm())
+    {
+        @*<div class="form-row justify-content-center">*@
+        <label>Ürün Ara</label>
+            @Html.Editor("ara")
+
+            <input class="btn btn-primary" type="submit" value="Ara" />
+            @*</div>*@
+
+    }
+    </div>
+
+    @foreach (var urn in Model)
+    {
+
+        <div class="col-md-4">
+
+
+
+            <div class="text-center">
+                <div style="color:black">
+                    <h2>@urn.UrunAdi</h2>
+                    <img src="@Url.Content(urn.UrunResim)" width="300" height="200" /><br />
+                    <th>@urn.UrunID</th><br />
+                    <th>@urn.UrunAciklama</th><br />
+                    <th> @urn.UrunStok tane kaldı </th><br />
+                    <h2>@urn.UrunFiyat tl</h2><br />
+                </div>
+                <td><a class="btn btn-success" href="/UrunListele/DeleteConfirmed/@urn.UrunID">Sil </a></td>
+
+                <td><a class="btn btn-success" href="/UrunListele/Edit/@urn.UrunID">Güncelle </a></td>
+            </div>
+
+
+
+    </div>
+
+    }
+
+
