@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssigmentUrunlerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrunAciklama" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrunStok" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrunFiyat" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrunResim" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="AssigmentUrunlerModelStoreContainer">
+    <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
